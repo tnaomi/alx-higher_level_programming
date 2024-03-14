@@ -11,6 +11,9 @@ argv.forEach((val, index) => {
 if (count > 2) {
   buffer1 = argv[2];
   for (let index = 0; index < buffer1.length; index++) {
+    if (buffer1[index] === '-' && buffer1[index + 1] in numbers) {
+      results.push(buffer1[index]);
+    }
     if (buffer1[index] in numbers) {
       results.push(buffer1[index]);
     }
@@ -18,8 +21,10 @@ if (count > 2) {
   if (results.length === 0) {
     console.log('Not a number');
   } else {
-    results = results.filter((value, index, array) => array.indexOf(value) === index).toString().replace(/,/g, '');
-    console.log('My number:', results);
+    if (results[0] !== '-') {
+      results = results.filter((value, index, array) => array.indexOf(value) === index);
+    }
+    console.log('My number: ', results.toString().replace(/,/g, ''), results.length);
   }
 } else {
   console.log('Not a number');
