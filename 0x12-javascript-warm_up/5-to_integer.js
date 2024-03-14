@@ -24,7 +24,7 @@ if (count > 2) {
     if (results[0] !== '-') {
       results = results.filter((value, index, array) => array.indexOf(value) === index);
     }
-    console.log('My number: ', results.toString().replace(/,/g, ''));
+    console.log('My number:', results.toString().replace(/,/g, ''));
   }
 } else {
   console.log('Not a number');
