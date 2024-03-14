@@ -5,6 +5,6 @@ const myPy = 'Python is cool';
 const myC = 'C is fun';
 const myLangs = [myC, myPy, myVar];
 
-for (const lang of myLangs) {
-  console.log(lang);
-}
+myLangs.forEach((val) => {
+  console.log(`${val}`);
+});
