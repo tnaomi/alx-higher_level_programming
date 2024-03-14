@@ -1,0 +1,25 @@
+{
+  "name": "warm_up",
+  "version": "1.0.0",
+  "description": "Javascript warmu up including variables, process argv etc",
+  "main": "0-javascript_is_amazing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnaomi/alx-higher_level_programming.git"
+  },
+  "keywords": [
+    "javascript",
+    "warmup",
+    "alx"
+  ],
+  "author": "Tadala N Kapengule",
+  "type": "module",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tnaomi/alx-higher_level_programming/issues"
+  },
+  "homepage": "https://github.com/tnaomi/alx-higher_level_programming#readme"
+}
