@@ -19,7 +19,7 @@ if (count > 2) {
     console.log('Not a number');
   } else {
     results = results.filter((value, index, array) => array.indexOf(value) === index).toString().replace(/,/g, '');
-    console.log('My number:', results);
+    console.log('My number: ', results);
   }
 } else {
   console.log('Not a number');
