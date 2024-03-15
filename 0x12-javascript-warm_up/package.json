@@ -16,7 +16,7 @@
     "alx"
   ],
   "author": "Tadala N Kapengule",
-  "type": "module",
+  "type": "commonjs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tnaomi/alx-higher_level_programming/issues"
