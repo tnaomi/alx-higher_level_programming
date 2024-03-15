@@ -1,10 +1,12 @@
 #!/usr/bin/node
 
-const times = Math.floor(Number(process.argv[2]));
-if (isNaN(times)) {
+import { argv } from 'node:process';
+
+const occ = Math.floor(Number(argv[2]));
+if (isNaN(occ)) {
   console.log('Missing number of occurrences');
 } else {
-  for (let i = 0; i < times; i++) {
+  for (let index = 0; index < occ; index++) {
     console.log('C is fun');
   }
 }
