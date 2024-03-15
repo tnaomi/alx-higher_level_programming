@@ -1,8 +1,6 @@
 #!/usr/bin/node
 
-import { argv } from 'node:process';
-
-const occ = Math.floor(Number(argv[2]));
+const occ = Math.floor(Number(process.argv[2]));
 if (isNaN(occ)) {
   console.log('Missing number of occurrences');
 } else {
