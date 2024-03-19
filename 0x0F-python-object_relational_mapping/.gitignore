@@ -1,4 +1,4 @@
 *.sql
 *.env
 *.swp
-virtual/
+*/virtual/
