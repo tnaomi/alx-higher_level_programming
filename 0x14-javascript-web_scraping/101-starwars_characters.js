@@ -11,15 +11,17 @@ request(url, function (err, _response, body) {
     console.error(err);
   } else {
     const filmCharacters = JSON.parse(body).characters;
-    let currentIndex = 0;
-    while (currentIndex + 1 < filmCharacters.length) {
-      request(filmCharacters[currentIndex], function (newErr, _newResponse, newBody) {
-        if (newErr) {
-          console.error(newErr);
-        }
-        console.log(JSON.parse(newBody).name);
-      });
-      currentIndex++;
-    }
+    getChars(filmCharacters, 0);
   }
 });
+
+function getChars (filmCharacters, currentIndex) {
+  request(filmCharacters[currentIndex], function (newErr, _newResponse, newBody) {
+    if (!newErr) {
+      console.log(JSON.parse(newBody).name);
+      if (currentIndex + 1 < filmCharacters.length) {
+        getChars(filmCharacters, currentIndex + 1);
+      }
+    }
+  });
+}
