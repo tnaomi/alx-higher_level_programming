@@ -12,7 +12,13 @@ request(url, function (err, _response, body) {
   } else {
     const filmCharacters = JSON.parse(body).characters;
     for (const character of filmCharacters) {
-      console.log(character.name);
+      request.get(character, function (newErr, _newResponse, newBody) {
+        if (newErr) {
+          console.error(newErr);
+        } else {
+          console.log(JSON.parse(newBody).name);
+        }
+      });
     }
   }
 });
