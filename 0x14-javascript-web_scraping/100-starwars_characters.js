@@ -11,8 +11,8 @@ request(url, function (err, _response, body) {
     console.error(err);
   } else {
     const filmCharacters = JSON.parse(body).characters;
-    for (const character in filmCharacters) {
-      console.log(character);
+    for (const character of filmCharacters) {
+      console.log(character.name);
     }
   }
 });
