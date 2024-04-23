@@ -12,14 +12,13 @@ request(url, function (err, _response, body) {
   } else {
     const filmCharacters = JSON.parse(body).characters;
     let currentIndex = 0;
-    while (currentIndex <= filmCharacters.length) {
+    while (currentIndex + 1 < filmCharacters.length) {
       request(filmCharacters[currentIndex], function (newErr, _newResponse, newBody) {
         if (newErr) {
           console.error(newErr);
         }
         console.log(JSON.parse(newBody).name);
       });
-      
       currentIndex++;
     }
   }
