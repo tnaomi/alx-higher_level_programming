@@ -12,8 +12,8 @@ request(url, function (err, _response, body) {
   } else {
     const filmCharacters = JSON.parse(body).characters;
     let currentIndex = 0;
-    while (currentIndex < filmCharacters.length) {
-      request.get(filmCharacters[currentIndex], function (newErr, _newResponse, newBody) {
+    while (currentIndex <= filmCharacters.length) {
+      request(filmCharacters[currentIndex], function (newErr, _newResponse, newBody) {
         if (newErr) {
           console.error(newErr);
         }
