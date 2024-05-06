@@ -84,3 +84,42 @@ Write a JavaScript script that updates the text of the ``<header>`` element to `
 __File__
 
 ``6-script.js``, test w ``6-main.html``
+
+### USING JQUERY WITH APIs
+
+### 7. Star Wars character
+
+Write a JavaScript script that fetches the *character name* from this URL: ``https://swapi-api.alx-tools.com/api/people/5/?format=json``
+
+- The name must be displayed in the ``HTML`` tag ``DIV#character``
+- You can’t use ``document.querySelector`` to select the ``HTML`` tag
+- You must use the ``JQuery`` API
+
+__File__
+
+``7-script.js``, test w ``7-main.html``
+
+### 8. Star Wars movies
+
+Write a JavaScript script that fetches and lists the *title* for all movies by using this URL: ``https://swapi-api.alx-tools.com/api/films/?format=json``
+
+- All movie titles must be list in the ``HTML`` tag ``UL#list_movies``
+- You can’t use ``document.querySelector`` to select the ``HTML`` tag
+- You must use the ``JQuery`` API
+
+__File__
+
+``8-script.js``, test w ``8-main.html``
+
+### 9. Say Hello!
+
+Write a JavaScript script that fetches from ``https://hellosalut.stefanbohacek.dev/?lang=fr`` and displays the value of hello from that fetch in the HTML tag ``DIV#hello``.
+
+- The translation of *“hello”* must be displayed in the ``HTML`` tag ``DIV#hello``
+- You can’t use ``document.querySelector`` to select the ``HTML`` tag
+- You must use the ``JQuery`` API
+- Your script must work when it is imported from the ``<head>`` tag
+
+__File__
+
+``9-script.js``, test w ``9-main.html``
