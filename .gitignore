@@ -694,3 +694,5 @@
 0x15-javascript-web_jquery/node_modules/jquery/src/var/support.js
 0x15-javascript-web_jquery/node_modules/jquery/src/var/toString.js
 0x15-javascript-web_jquery/node_modules/jquery/src/var/whitespace.js
+.vscode/settings.json
+.gitignore
