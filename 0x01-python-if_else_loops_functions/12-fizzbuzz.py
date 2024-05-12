@@ -21,11 +21,11 @@ def fizzbuzz():
     for num in range(1, 101):
         if _mod(num, 3) == 0:
             if _mod(num, 5) == 0:
-                print('FizzBuzz', end=' ')
-            print('Fizz', end=' ')
+                print('FizzBuzz ', end='')
+            print('Fizz ', end='')
         elif _mod(num, 5) == 0:
             if _mod(num, 3) == 0:
-                print('|Fizzbuzz', end=' ')
-            print('Buzz', end=' ')
+                print('Fizzbuzz ', end='')
+            print('Buzz ', end=' ')
         else:
-            print(num, end=' ')
+            print("{} ".format(num), end='')
