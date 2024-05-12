@@ -22,10 +22,12 @@ def fizzbuzz():
         if _mod(num, 3) == 0:
             if _mod(num, 5) == 0:
                 print('FizzBuzz ', end='')
-            print('Fizz ', end='')
+            else:
+                print('Fizz ', end='')
         elif _mod(num, 5) == 0:
             if _mod(num, 3) == 0:
                 print('Fizzbuzz ', end='')
-            print('Buzz ', end=' ')
+            else:
+                print('Buzz ', end=' ')
         else:
             print("{} ".format(num), end='')
