@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-
-letter=""
-
+""" Print the letters of the alphabet without storing in a var """
 for indx in range(97, (97+26)):
-        letter=letter + chr(indx)
-
-print(letter)
+    print(chr(indx), end='')
