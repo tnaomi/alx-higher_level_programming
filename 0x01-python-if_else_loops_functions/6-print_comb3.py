@@ -4,6 +4,6 @@ for number in range(0, 9):
     for suffix in range(1, 10):
         if suffix > number:
             if number != 8:
-                print(f"{number}{suffix}", end=', ')
+                print("{}{}".format(number, suffix), end=', ')
             else:
-                print(f"{number}{suffix}")
+                print("{}{}".format(number, suffix))

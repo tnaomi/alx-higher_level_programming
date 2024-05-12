@@ -15,4 +15,4 @@ def uppercase(str):
             List.append(c)
 
     f_string = ''.join(List)
-    print(f_string)
+    print("{}".format(f_string))

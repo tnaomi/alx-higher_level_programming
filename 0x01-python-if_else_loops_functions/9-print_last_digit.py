@@ -13,5 +13,5 @@ def print_last_digit(number):
     mod = _mod(number, 10)
     if mod < 0:
         mod *= -1
-    print(mod, end='')
+    print("{}".format(mod), end='')
     return (mod)
