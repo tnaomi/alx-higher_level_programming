@@ -33,8 +33,8 @@ if __name__ == "__main__":
         elif op == "*":
             result = a * b
         elif op == "/":
-            result = a / b
+            result = (a / b)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
-        print("{} {} {} = {}".format(a, op.strip(), b, result))
+        print("{} {} {} = {}".format(a, op.strip(), b, result.__round__()))
