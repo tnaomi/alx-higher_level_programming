@@ -3,10 +3,10 @@
 def magic_calculation(a, b):
     from calculator_1 import add, sub
     if (a < b):
-        c = add(a, b)
+        c = sub(a, b)
         for count in range(4, 6):
-            c = add(c, count)
+            c -= count
         return c
     else:
-        diff = sub(a, b)
-        return diff
+        sum = add(b, a)
+        return sum
