@@ -227,3 +227,37 @@ __File__
 `13-insert_number.c`, `lists.h`
 
 __OPTIONAL__ __TASKS__
+
+### 14. Smile in the mirror
+
+Write a program that prints the `ASCII` alphabet, in reverse order, alternating lowercase and uppercase (`z` in lowercase and `Y` in uppercase) , not followed by a new line.
+
+- You can only use one `print` function with string format
+- You can only use one loop in your code
+- You are not allowed to store characters in a variable
+- You are not allowed to import any module
+
+__File__
+
+`100-print_tebahpla.py`
+
+### 15. Remove at position
+
+Write a function that creates a copy of the string, removing the character at the position `n` (not the Python way, the “C array index”).
+
+- Prototype: `def remove_char_at(str, n):`
+- You are not allowed to import any module
+
+You don’t need to understand `__import__`
+
+__File__
+
+`101-remove_char_at.py`
+
+### 16. ByteCode -> Python #2
+
+Write the Python function `def magic_calculation(a, b, c):` to function as a bytecode.
+
+__File__
+
+`102-magic_calculation.py`

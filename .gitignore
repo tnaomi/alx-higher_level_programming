@@ -702,3 +702,5 @@
 0x01-python-if_else_loops_functions/__pycache__/10-add.cpython-312.pyc
 0x01-python-if_else_loops_functions/__pycache__/11-pow.cpython-312.pyc
 0x01-python-if_else_loops_functions/__pycache__/12-fizzbuzz.cpython-312.pyc
+0x01-python-if_else_loops_functions/__pycache__/101-remove_char_at.cpython-312.pyc
+.gitignore
