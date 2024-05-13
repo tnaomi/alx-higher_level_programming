@@ -38,6 +38,8 @@ def mul(a, b):
     return (a * b)
 
 # Added to gitignore
+
+
 def div(a, b):
     """My division function
 

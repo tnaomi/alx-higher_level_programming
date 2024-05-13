@@ -25,7 +25,8 @@ if __name__ == "__main__":
                 result = a / b
             case _:
                 print("Unknown operator. Available operators: +, -, * and /")
-                exit(1)""" # Removed because match is not available in Python3.8xxx
+                exit(1)"""
+#  Removed because match is not available in Python3.8xxx
         if op == "+":
             result = a + b
         elif op == "-":
