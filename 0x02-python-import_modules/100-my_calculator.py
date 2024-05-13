@@ -12,8 +12,9 @@ if __name__ == "__main__":
     else:
         a = int(argv[1])
         b = int(argv[3])
+        op = argv[2]
 
-        match argv[2]:
+        """match argv[2]:
             case "+":
                 result = a + b
             case "-":
@@ -24,5 +25,16 @@ if __name__ == "__main__":
                 result = a / b
             case _:
                 print("Unknown operator. Available operators: +, -, * and /")
-                exit(1)
-        print("{} {} {} = {}".format(a, argv[2].strip(), b, result))
+                exit(1)""" # Removed because match is not available in Python3.8xxx
+        if op == "+":
+            result = a + b
+        elif op == "-":
+            result = a - b
+        elif op == "*":
+            result = a * b
+        elif op == "/":
+            result = a / b
+        else:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
+        print("{} {} {} = {}".format(a, op.strip(), b, result))
