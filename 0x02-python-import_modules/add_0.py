@@ -3,7 +3,7 @@ def add(a, b):
     """My addition function
 
     Args:
-        a: first integer
+        a: first integer parameter
         b: second integer
 
     Returns:
