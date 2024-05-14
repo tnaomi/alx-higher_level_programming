@@ -9,19 +9,15 @@ def add_tuple(tuple_a=(), tuple_b=()):
     count_a = len(tuple_a)
     count_b = len(tuple_b)
 
-    if count_a > 2 | count_b > 2:
-        del (count_a, count_b)
-        count_a = count_b = 2
+    if count_a == 0:
+        tuple_a = (0, 0)
+    if count_b == 0:
+        tuple_b = (0, 0)
 
-    elif count_a == 0 | count_b == 0:
-        del (tuple_a, tuple_b)
-        tuple_a = tuple_b = (0, 0)
-
-    elif count_a == 1 | count_b == 1:
-        if count_a == 1:
-            tuple_a = (tuple_a[0], 0)
-        elif count_b == 1:
-            tuple_b = (tuple_b[0], 0)
+    if count_a == 1:
+        tuple_a = (tuple_a[0], 0)
+    if count_b == 1:
+        tuple_b = (tuple_b[0], 0)
 
     sum1 = tuple_a[0] + tuple_b[0]
     sum2 = tuple_a[1] + tuple_b[1]
