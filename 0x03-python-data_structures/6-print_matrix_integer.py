@@ -6,5 +6,8 @@ def print_matrix_integer(matrix=[[]]):
         matrix (list, optional): Input matrix. Defaults to [[]].
     """
     for row in matrix:
+        space = ""
         for column in row:
-            print("{:d}".format(column), end=" ")
+            print("{:s}{:d}".format(space, column), end="")
+            space = " "
+        print()
