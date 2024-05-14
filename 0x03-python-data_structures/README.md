@@ -200,3 +200,22 @@ gcc -Wall -Werror -Wextra -pedantic 13-main.c linked_lists.c 13-is_palindrome.c 
 __File__
 
 `13-is_palindrome.c`, `lists.h`
+
+__OPTIONAL <><><> TASKS__
+
+### 14. CPython #0: Python lists
+
+Create a C function that prints some basic info about Python lists.
+
+- **Prototype**: `void print_python_list_info(PyObject *p);`
+- Format: see example
+- Python version: `3.4`
+- Your shared library will be compiled with this command line: `gcc -Wall -Werror -Wextra -pedantic -std=c99 -shared -Wl,-soname,PyList -o libPyList.so -fPIC -I/usr/include/python3.4 100-print_python_list_info.c`
+- **OS**: `Ubuntu 14.04 LTS`
+- Start by reading:
+    - listobject.h
+    - object.h
+    - Common Object Structures
+    - List Objects
+
+`100-print_python_list_info.c`
