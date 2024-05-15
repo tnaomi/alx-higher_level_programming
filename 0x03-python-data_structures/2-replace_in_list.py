@@ -11,12 +11,7 @@ def replace_in_list(my_list, idx, element):
     Returns:
         list: original list if error, modified list otherwise
     """
-    if idx < 0 | idx > len(my_list):
-        return my_list
-    for i in range(len(my_list)):
-        while idx != i:
-            i += 1
-            pass
-        my_list.remove(my_list[idx])
-        my_list.insert((idx), element)
-        return my_list
+
+    if idx in range(len(my_list)):
+        my_list[idx] = element
+    return my_list
