@@ -11,14 +11,10 @@ def new_in_list(my_list, idx, element):
     Returns:
         list: original list if error, modified list otherwise
     """
-    list_copy = my_list.copy()
-    if idx < 0 | idx > len(list_copy):
-        return list_copy
+    if idx in range(len(my_list)):
+        my_copy = my_list.copy()
+        my_copy.remove(my_copy[idx])
+        my_copy.insert(idx, element)
+        return my_copy
 
-    for i in range(len(list_copy)):
-        while idx != i:
-            i += 1
-            pass
-        list_copy.remove(list_copy[idx])
-        list_copy.insert((idx), element)
-        return list_copy
+    return my_list
