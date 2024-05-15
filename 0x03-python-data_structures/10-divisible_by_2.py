@@ -6,9 +6,7 @@ def divisible_by_2(my_list=[]):
         my_list (list, optional): Input array of integers. Defaults to [].
 
     Returns:
-        List: A list of the elements divisible and not divisible by 2
+        List: A list of the elements divisible by 2 as a list of bools
     """
-    final_list = []
-    final_list = [my_list[count] for count in range(len(my_list))
-                  if my_list[count] % 2 == 0]
+    final_list = [True if num % 2 == 0 else False for num in my_list]
     return final_list
