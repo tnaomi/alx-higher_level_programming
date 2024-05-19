@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 def uniq_add(my_list=[]):
-    unique=my_list.copy()
+    """### Adds all unique integers
 
-    for i in  unique:
-        while unique.count(i)!=1:
-            unique.remove(i)
-
-    unique_sum=0
-    for x in unique:
-        unique_sum+=x
-    return(unique_sum)
+    ### Args:
+        my_list (__list__, optional): _Input array_. Defaults to __[]__.
+    """
+    uniq = []
+    for num in my_list:
+        if num in uniq:
+            continue
+        uniq.append(num)
+    return sum(uniq)
