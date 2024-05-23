@@ -722,4 +722,5 @@
 .vscode/c_cpp_properties.json
 0x04-python-more_data_structures/*-main.py
 0x04-python-more_data_structures/__pycache__/*.pyc
-
+0x05-python-exceptions/*-main.py
+0x05-python-exceptions/__pycache__/*
