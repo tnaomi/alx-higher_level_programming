@@ -25,30 +25,27 @@ def roman_to_int(roman_string):
             _int_: _integer equivalent of a roman numeral_
         """
         summ = 0
-        for i in range(start, length):
-            current = dct[romn[i]]
-            summ += current
+        ops = [dct[next(iter(romn[i]))] for i in range(0, length)]
+        print(ops)
+        for i in range(len(ops)):
+            if i + 1 == len(ops):
+                break
+            summ += ops[i]
         return summ
 
-    if roman_string is not None:
+    if roman_string is str or not None:
         length = len(roman_string)
         roman = {"I": 1,
-                 "V": 5,
-                 "X": 10,
-                 "L": 50,
-                 "C": 100,
-                 "D": 500,
-                 "M": 1000}
+                    "V": 5,
+                    "X": 10,
+                    "L": 50,
+                    "C": 100,
+                    "D": 500,   
+                    "M": 1000}
         if length < 2:
             actual_no = roman.get(roman_string)
         else:
-            op1, op2 = roman[roman_string[0]], roman[roman_string[1]]
-            if op1 >= op2:
-                actual_no = dict_sum(length, 0, roman, roman_string)
-            else:
-                store = op2 - op1
-                if length == 2:
-                    actual_no = store
-                else:
-                    actual_no = dict_sum(length, 2, roman, roman_string)
+            actual_no = dict_sum(length, 0, roman, roman_string)
+    else:
+        actual_no = 0
     return actual_no
