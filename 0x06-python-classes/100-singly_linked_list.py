@@ -60,10 +60,11 @@ class Node:
         Raises:
             TypeError: _description_
         """
-        if not isinstance(value, Node):
-            raise TypeError("next_node must be a valid Node object")
-        else:
+        if isinstance(value, Node) or value is None:
             self.__next_node = value
+            
+        else:
+            raise TypeError("next_node must be a valid Node object")
 
 
 class SinglyLinkedList:
@@ -87,7 +88,7 @@ class SinglyLinkedList:
         Args:
             value (_Node_): New node
         """
-        new_node = Node(self, value)
+        new_node = Node(value)
         if not self.__head or self.__head.data >= value:
             new_node.next_node = self.__head
             self.__head = new_node
