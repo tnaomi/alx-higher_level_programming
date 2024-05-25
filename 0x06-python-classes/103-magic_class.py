@@ -18,7 +18,7 @@ class MagicClass:
     """
     def __init__(self, radius=0):
         if not isinstance(radius, int) and not isinstance(radius, float):
-            raise TypeError("Radius must be an integer or float")
+            raise TypeError("Radius must be a number")
         elif radius < 0:
             raise ValueError("Radius must be positive")
         else:
@@ -32,7 +32,7 @@ class MagicClass:
         """
         return pi*(self.__radius**2)
 
-    def circum(self):
+    def circumference(self):
         """Calculate circumference of the circle object
         """
         return 2 * pi * self.__radius
