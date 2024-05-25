@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+"""Square class with methods.
+NEW: Initialise private instance attribute `__size`
+"""
+
+
 class Square:
     """Square class. Initiate size
 

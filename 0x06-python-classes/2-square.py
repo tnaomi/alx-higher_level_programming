@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+""" Square class with methods.
+NEW: Add error handling to attribute instantiation
+"""
+
+
 class Square:
     """Square class. Initiate size w initial val. Handle errors
 

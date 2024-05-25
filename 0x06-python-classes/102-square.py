@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
+"""Based on `4-square.py`, methods for comparison
+"""
+
+
 class Square:
     """Square class.
     - Initiate private attribute `size`
-    - Initiate public attribute `area`
 
     Attributes:
         __size  : Size of the square; Private attr; positive integer only

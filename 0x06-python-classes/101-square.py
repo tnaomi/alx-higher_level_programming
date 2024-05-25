@@ -1,5 +1,11 @@
 #!/usr/bin/python3
 
+""" Square Class with its methods
+
+NEW: Return a printable object using `__str__`
+"""
+
+
 class Square:
     """Square class.
     - Initiate private attribute `size`

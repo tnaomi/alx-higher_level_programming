@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+""" Creates and manipulates Node and SinglyLinked list
+"""
+
+
 class Node:
     """Defines a single node
     """

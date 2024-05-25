@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" MAGIC CLASS
+Defines the MagicClass class and its modules
+"""
 
 from math import pi
 
