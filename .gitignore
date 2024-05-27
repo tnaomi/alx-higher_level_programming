@@ -726,3 +726,6 @@
 0x05-python-exceptions/__pycache__/*
 0x06-python-classes/*-main.py
 0x06-python-classes/__pycache__/*
+0x07-python-test_driven_development/__pycache__/*
+0x07-python-test_driven_development/*-main.py
+0x07-python-test_driven_development/tests/__pycache__/*
