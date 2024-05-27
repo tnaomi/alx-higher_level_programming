@@ -23,18 +23,20 @@ def matrix_divided(matrix, div):
         list: Modified copy of `matrix`
     """
 
-    cp, allwd, allwd_types, result = matrix.copy(), True, [int, float], []
+    allwd, allwd_types, result = True, [int, float], []
     uneq = "Each row of the matrix must have the same size"
     unallwd = "matrix must be a matrix (list of lists) of integers/floats"
     zero = "division by zero"
     no = "div must be a number"
 
-    for i in cp:
-        if len(i) not in result:
-            result.append(len(i))
-    if len(result) != 1:
+    if matrix is None:
+        return 0
+    elif len(matrix) == 0 or (len(matrix) == 1 and len(matrix[0]) == 0):
+        return 0
+    cp = matrix.copy()
+
+    if not all(len(i) == len(cp[0]) for i in cp):
         raise TypeError(uneq)
-    result.clear()
 
     for i in range(len(cp)):
         for j in range(len(cp[i])):
