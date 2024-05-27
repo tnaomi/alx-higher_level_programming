@@ -48,14 +48,16 @@ def matrix_mul(m_a, m_b):
         if len(row) not in result:
             result.append(len(row))
     if len(result) != 1:
+        result = 0
         raise ValueError(msg_len)
-    result.clear()
+    result = []
     for row in m_b:
         if len(row) not in result:
             result.append(len(row))
     if len(result) != 1:
+        result = 0
         raise TypeError(msg_len.replace("m_a", "m_b"))
-    result.clear()
+    result = []
 
     try:
         for i in range(len(m_a)):
