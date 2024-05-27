@@ -1,4 +1,4 @@
-#!/usr/bin/python2
+#!/usr/bin/python3
 """Module
 
 `101-lazy_matrix_mul` - Uses `numpy`
