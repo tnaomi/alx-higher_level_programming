@@ -19,10 +19,18 @@ def text_indentation(text):
         del (p, operators)
         raise TypeError("text must be a string")
 
-    p = [i for i in text]
+    elif len(text) == 0:
+        return None
 
-    for i in range(len(p)):
-        if p[i] in operators:
-            p[i + 1] = "\n\n"
+    cursor = 0
+
+    for i in range(len(text)):
+        if text[i] in operators:
+            p.append(text[cursor: i + 1] + "\n\n")
+            cursor = i + 1
+
+    p.append(text[cursor:i + 1])
+
+    p = [i.strip(' ') for i in p]
 
     print("".join(p), end='')
