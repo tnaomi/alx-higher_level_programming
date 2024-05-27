@@ -27,9 +27,9 @@ def matrix_mul(m_a, m_b):
         raise TypeError(msg_a.__add__(" of lists"))
     elif not all(type(i) is list for i in m_b):
         raise TypeError(msg_a.replace("m_a", "m_b").__add__(" of lists"))
-    elif len(m_a) == 0:
+    elif len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
         raise ValueError(msg_em)
-    elif len(m_b) == 0:
+    elif len(m_b) == 0 or (len(m_a) == 1 and len(m_b[0]) == 0):
         raise ValueError(msg_em.replace("m_a", "m_b"))
 
     result = [False if type(j) not in [int, float] else True
@@ -44,10 +44,6 @@ def matrix_mul(m_a, m_b):
         raise TypeError(msg_type.replace("m_a", "m_b"))
     result = []
 
-    if len(m_a[0]) != len(m_b):
-        msg = "m_a and m_b can't be multiplied"
-        raise ValueError(msg)
-
     for row in m_a:
         if len(row) not in result:
             result.append(len(row))
@@ -61,8 +57,11 @@ def matrix_mul(m_a, m_b):
         raise TypeError(msg_len.replace("m_a", "m_b"))
     result.clear()
 
-    for i in range(len(m_a)):
-        n_row = [sum([m_a[i][k] * m_b[k][j] for k in range(len(m_b))])
-                 for j in range(len(m_b[0]))]
-        result.append(n_row)
+    try:
+        for i in range(len(m_a)):
+            n_row = [sum([m_a[i][k] * m_b[k][j] for k in range(len(m_b))])
+                     for j in range(len(m_b[0]))]
+            result.append(n_row)
+    except Exception:
+        raise ValueError("m_a and m_b can't be multiplied")
     return result
