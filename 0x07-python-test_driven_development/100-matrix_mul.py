@@ -29,7 +29,7 @@ def matrix_mul(m_a, m_b):
         raise TypeError(msg_a.replace("m_a", "m_b").__add__(" of lists"))
     elif len(m_a) == 0 or (len(m_a) == 1 and len(m_a[0]) == 0):
         raise ValueError(msg_em)
-    elif len(m_b) == 0 or (len(m_a) == 1 and len(m_b[0]) == 0):
+    elif len(m_b) == 0 or (len(m_b) == 1 and len(m_b[0]) == 0):
         raise ValueError(msg_em.replace("m_a", "m_b"))
 
     result = [False if type(j) not in [int, float] else True
