@@ -5,9 +5,6 @@
 """
 
 
-from typing import Any
-
-
 class Rectangle:
     """ Defines a rectangle w attr `width` and `height`
     """
