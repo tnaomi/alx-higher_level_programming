@@ -12,6 +12,10 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initialise an object
         """
+        if width is None:
+            width = 0
+        elif height is None:
+            height = 0
         if type(width) is not int:
             raise TypeError('width must be an integer')
         elif type(height) is not int:
@@ -20,6 +24,7 @@ class Rectangle:
             raise ValueError('width must be >= 0')
         elif height < 0:
             raise ValueError('height must be >= 0')
+
         self.__width = width
         self.__height = height
 
@@ -46,6 +51,8 @@ class Rectangle:
             TypeError: If `value` is not an integer or is None
             ValueError: If `value` is less than 0
         """
+        if value is None:
+            value = 0
         if type(value) is not int:
             raise TypeError('width must be an integer')
         if value < 0:
@@ -63,6 +70,8 @@ class Rectangle:
             TypeError: _If `value` is not an integer or is None_
             ValueError: _If `value` is less than 0_
         """
+        if value is None:
+            value = 0
         if type(value) is not int:
             raise TypeError('height must be an integer')
         if value < 0:
