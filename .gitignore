@@ -733,7 +733,7 @@
 0x08-python-more_classes/*-main*
 alx-higher_level_programming.code-workspace
 0x10-python-network_0/__pycache__
-.github
 .vscode
 .docker
+.devcontainer
 *.code-workspace
