@@ -1,12 +1,18 @@
 #!/usr/bin/python3
-""" Request an URL and display status """
+""" Request an URL and display X-Request-Id """
 
 if __name__ == "__main__":
     import urllib.request as UR
-    url = "https://alx-intranet.hbtn.io/status"
-    with UR.urlopen(url) as response:
-        body = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(body)))
-        print("\t- content: {}".format(body))
-        print("\t- utf8 content: {}".format(body.decode("utf-8")))
+    from sys import argv
+
+    xr = ""
+    if len(argv) != 2:
+        xr = ""
+    else:
+        url = str(argv[1])
+        try:
+            with UR.urlopen(url) as response:
+                xr = response.info().get('X-Request-Id')
+        except Exception:
+            pass
+    print(xr)
