@@ -25,6 +25,9 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.12.2"
+    - name: Update sudo
+      run: |
+        sudo apt update
     - name: Install dependencies
       run: |
         pip install --upgrade pip
@@ -33,9 +36,7 @@ jobs:
     - name: Lint with PYCODESTYLE
       run: |
         # stop the build if there are Python syntax errors or undefined names
-        pycodestyle *.py --count --select=E9,F63,F7,F82 --format pylint --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        pycodestyle *.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        pycodestyle *.py --count --format pylint --statistics
     - name: Test with pytest
       run: |
         pytest
