@@ -28,6 +28,10 @@ jobs:
     - name: Update sudo
       run: |
         sudo apt update
+    - name: Update node
+      run: |
+        sudo apt install nodejs
+        node -v
     - name: Install dependencies
       run: |
         pip install --upgrade pip
