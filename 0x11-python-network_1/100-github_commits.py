@@ -8,10 +8,8 @@ if __name__ == "__main__":
 
     repo = str(argv[1])
     owner = str(argv[2])
-    passwd = str(argv[3])
     header = {"User-Agent": "tnaomi", "Accept": "application/vnd.github+json",
-              "X-GitHub-Api-Version": "2022-11-28",
-              "Authorization": "Bearer {}".format(passwd)}
+              "X-GitHub-Api-Version": "2022-11-28"}
     url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
     try:
         response = R.request("GET", url=url, headers=header)
