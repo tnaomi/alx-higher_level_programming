@@ -9,11 +9,7 @@ class MyInt(int):
         """ Initialises `MyInt` w `number` """
         if type(value) is not int:
             raise TypeError("value must be an integer")
-        else:
-            if value <= 0:
-                raise ValueError("value must be greater than 0")
-            else:
-                self = value
+        self = value
 
     def __eq__(self, value: object) -> bool:
         """ Invert equality check """
