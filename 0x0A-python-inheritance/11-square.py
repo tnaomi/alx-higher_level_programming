@@ -5,9 +5,9 @@ Rec = __import__('9-rectangle').Rectangle
 
 class Square(Rec):
     """ Defines `Square` """
-    def __init__(self, value):
+    def __init__(self, size):
         """ Initialises `Square` w `size` """
-        self.__size = Rec.integer_validator(self, "width", value)
+        self.__size = Rec.integer_validator(self, "size", size)
 
     def area(self):
         """ Implements the `area` """
