@@ -737,3 +737,5 @@ alx-higher_level_programming.code-workspace
 .docker
 .devcontainer
 *.code-workspace
+0x0A-python-inheritance/__pycache__
+0x0A-python-inheritance/*-main.py
