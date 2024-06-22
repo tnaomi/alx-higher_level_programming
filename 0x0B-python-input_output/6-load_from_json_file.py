@@ -5,4 +5,5 @@ import json
 
 def load_from_json_file(filename):
     """ Constructs an obj from a JSON string using `json.load` """
-    return json.loads(filename)
+    with open(file=filename, mode="r+", encoding="utf-8") as r:
+        return json.load(r)
