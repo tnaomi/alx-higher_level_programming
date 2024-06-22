@@ -12,11 +12,11 @@ class Student():
 
     def to_json(self, attrs=None):
         """ Returns a dictionary represantation of `Student` instance """
-        if not isinstance(attrs, (list)) or not all(isinstance(i, str) 
+        if not isinstance(attrs, (list)) or not all(isinstance(i, str)
                                                     for i in attrs):
             return self.__dict__.copy()
         else:
-            new_d = {i: self.__dict__[i] for i in attrs if i in self.__dict__}            
+            new_d = {i: self.__dict__[i] for i in attrs if i in self.__dict__}
             return new_d
 
     def reload_from_json(self, json):
