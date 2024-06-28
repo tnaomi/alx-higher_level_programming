@@ -744,3 +744,8 @@ alx-higher_level_programming.code-workspace
 0x0B-python-input_output/*.txt
 0x0B-python-input_output/*.json
 0x0B-python-input_output/*my_class*
+0x0C-python-almost_a_circle/__pycache__
+0x0C-python-almost_a_circle/*/__pycache__
+0x0C-python-almost_a_circle/.pytest_cache
+0x0C-python-almost_a_circle/*-main.py
+.gitignore
